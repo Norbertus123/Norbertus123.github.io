@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>MENU UTAMA</h1>
+
+        <!-- Menu setelah login -->
+    </nav>
+    <nav id="user-menu" style="display: none;">
+    <a href="about.html">Tentang Kami</a>
+    <a href="instructions.html">Petunjuk Penggunaan Sistem</a>
+    <a href="developer.html">Pengembang Sistem</a>
+    <a href="products.html">Produk</a>
+    <a href="estimate.html">Estimasi Produk</a>
+</nav>
+    </header>
+
+    <section>
+        <nav id="main-menu">
+        <h2>Formulir Login</h2>
+        <form id="login-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="button" onclick="performLogin()">Login</button>
+        </nav>
+        </form>
+    </section>
+    <script src="main.js"></script>
+    <button onclick="goBack()">Kembali</button>
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>

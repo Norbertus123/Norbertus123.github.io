@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estimasi Produk</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+    <h1>Estimasi Produk Besek</h1>
+    
+    <label for="bambu">Jumlah Bambu:</label>
+    <input type="number" id="bambu">
+    
+    <button onclick="estimasi()">Estimasi</button>
+
+    <p id="hasilEstimasi"></p>
+
+    <script>
+        function estimasi() {
+            var jumlahBambu = document.getElementById("bambu").value;
+            var estimasiProduk = jumlahBambu * 10; // Misalnya, 10 besek dari setiap bambu
+
+            document.getElementById("hasilEstimasi").innerHTML = "Dengan " + jumlahBambu + " bambu, Anda dapat membuat sekitar " + estimasiProduk + " besek.";
+        }
+    </script>
+     <script src="main.js"></script>
+
+     <button onclick="goBack()">Kembali</button>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>
