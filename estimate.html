@@ -3,36 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estimasi Produk</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Estimasi Produksi</title>
+    <script>
+        function estimasiProduksi() {
+            // Target produksi
+            const targetBesekBesar = 10;
+            const targetBesekKecil = 10;
 
+            // Asumsi produksi besek kecil dari satu besek besar
+            const besekKecilPerBesekBesar = 2;
+
+            // Estimasi produksi besek besar
+            const jumlahBesekBesar = targetBesekBesar;
+
+            // Estimasi produksi besek kecil
+            const jumlahBesekKecil = targetBesekKecil * besekKecilPerBesekBesar;
+
+            // Output hasil estimasi
+            document.getElementById('hasilEstimasi').innerHTML = `
+                <div>
+                    <p>Dalam 1 jam, estimasi produksi:</p>
+                    <ul>
+                        <li>Besek Besar: ${jumlahBesekBesar} buah</li>
+                        <img src="besek_besar.jpg" alt="Besek Besar" width="200">
+                        <li>Besek Kecil: ${jumlahBesekKecil} buah</li>
+                        <img src="besek_kecil.jpg" alt="Besek Kecil" width="200">
+                    </ul>
+                </div>
+            `;
+        }
+    </script>
 </head>
 <body>
-    <h1>Estimasi Produk Besek</h1>
-    
-    <label for="bambu">Jumlah Bambu:</label>
-    <input type="number" id="bambu">
-    
-    <button onclick="estimasi()">Estimasi</button>
+    <h2>Estimasi Produksi Besek</h2>
+    <button onclick="estimasiProduksi()">Hitung Estimasi</button>
+    <div id="hasilEstimasi"></div>
 
-    <p id="hasilEstimasi"></p>
+</section>
+<script src="main.js"></script>
+<button onclick="goBack()">Kembali</button>
 
-    <script>
-        function estimasi() {
-            var jumlahBambu = document.getElementById("bambu").value;
-            var estimasiProduk = jumlahBambu * 10; // Misalnya, 10 besek dari setiap bambu
+<script>
+    function goBack() {
+        window.history.back();
+    }
+</script>
 
-            document.getElementById("hasilEstimasi").innerHTML = "Dengan " + jumlahBambu + " bambu, Anda dapat membuat sekitar " + estimasiProduk + " besek.";
-        }
-    </script>
-     <script src="main.js"></script>
-
-     <button onclick="goBack()">Kembali</button>
-
-    <script>
-        function goBack() {
-            window.history.back();
-        }
-    </script>
 </body>
 </html>
