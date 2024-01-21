@@ -3,51 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estimasi Produksi</title>
-    <script>
-        function estimasiProduksi() {
-            // Target produksi
-            const targetBesekBesar = 10;
-            const targetBesekKecil = 10;
+    <title>Tentang Kami</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 
-            // Asumsi produksi besek kecil dari satu besek besar
-            const besekKecilPerBesekBesar = 2;
-
-            // Estimasi produksi besek besar
-            const jumlahBesekBesar = targetBesekBesar;
-
-            // Estimasi produksi besek kecil
-            const jumlahBesekKecil = targetBesekKecil * besekKecilPerBesekBesar;
-
-            // Output hasil estimasi
-            document.getElementById('hasilEstimasi').innerHTML = `
-                <div>
-                    <p>Dalam 1 jam, estimasi produksi:</p>
-                    <ul>
-                        <li>Besek Besar: ${jumlahBesekBesar} buah</li>
-                        <img src="besek_besar.jpg" alt="Besek Besar" width="200">
-                        <li>Besek Kecil: ${jumlahBesekKecil} buah</li>
-                        <img src="besek_kecil.jpg" alt="Besek Kecil" width="200">
-                    </ul>
-                </div>
-            `;
-        }
-    </script>
 </head>
 <body>
-    <h2>Estimasi Produksi Besek</h2>
-    <button onclick="estimasiProduksi()">Hitung Estimasi</button>
-    <div id="hasilEstimasi"></div>
+    <h1>Tentang Kami</h1>
+    <p>Selamat datang di UMKM Kerajinan Besek. Kami adalah sebuah usaha mikro, kecil, dan menengah (UMKM) yang bergerak dalam pembuatan besek dari pohon bambu. Berdiri sejak tahun 1965,kami berkomitmen untuk menghasilkan produk berkualitas tinggi yang menggabungkan tradisi dan inovasi.</p>
 
-</section>
-<script src="main.js"></script>
-<button onclick="goBack()">Kembali</button>
+    <p>yang mana ukm ini dilestarikan secara turun temurun. 
+       <p>UKM ini di dirikan oleh ibu Mujiem </p> 
+    </p><img src="mujiem.jpg" alt="Bu mujiem" width="200">
+      <p>Ibu mujiem telah membuat besek semejak ia masih berada dibangku SD</p>
 
-<script>
-    function goBack() {
-        window.history.back();
-    }
-</script>
+    <p>Kami memahami keindahan dan keunikan produk kerajinan tangan, dan itulah mengapa setiap besek yang kami hasilkan diolah dan diteliti dengan baik. Bambu yang kami gunakan dipilih secara khusus untuk memastikan kekuatan dan daya tahan produk.</p>
 
+    <p>Kami bangga dapat berkontribusi pada pelestarian kerajinan tradisional dan memperkenalkan keindahan besek kepada masyarakat luas. Produk kami tidak hanya menjadi barang fungsional, tetapi juga sebuah karya seni yang memancarkan keindahan alam dan keahlian tangan.</p>
+
+    <p>Terima kasih atas dukungan Anda. Semoga produk kami dapat memberikan kepuasan dan keindahan dalam kehidupan sehari-hari Anda.</p>
+
+    <p>UKM besek bambu ini berada di desa pingit, kecamatan jetis, kelurahan bumijo, badran rw 11</p>
+
+    <footer>
+        <p>&copy; 2024 UMKM Kerajinan Besek</p>
+    </footer>
+    <script src="main.js"></script>
+    <button onclick="goBack()">Kembali</button>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
 </body>
 </html>
